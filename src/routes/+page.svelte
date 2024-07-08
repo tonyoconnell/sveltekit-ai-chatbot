@@ -14,7 +14,7 @@
 </script>
 
 <main class="max-w-2xl mx-auto p-6 bg-white border h-full">
-	<h1 class="text-2xl font-bold mb-4 text-center">AI Assistant</h1>
+	<h1 class="text-2xl font-bold mb-4 text-center">The Fastest AI</h1>
 	<div class="h-[85%] overflow-y-auto border-b mb-4 pb-4" bind:this={messageContainer}>
 		<ul class="space-y-4">
 			{#each $messages as message}
