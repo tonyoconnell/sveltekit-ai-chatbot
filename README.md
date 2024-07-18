@@ -1,6 +1,6 @@
-# create-svelte
+# The Fastest AI
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Here's the fastest way to deploy an AI app
 
 ## Creating a project
 
