@@ -4,15 +4,9 @@ import type { RequestHandler } from './$types';
 
 import { env } from '$env/dynamic/private';
 
-<<<<<<< HEAD
 const groq = createOpenAI({
 //  baseURL: 'http://localhost:3100/chat/completions',
   baseURL: 'https://api.groq.com/openai/v1',
-=======
-const rivet = createOpenAI({
-  baseURL: 'http://localhost:3100',
-//  baseURL: 'https://api.groq.com/openai/v1',
->>>>>>> openai
   apiKey: env.GROQ_API_KEY ?? ''
 });
 
@@ -20,20 +14,10 @@ const rivet = createOpenAI({
 export const POST = (async ({ request }) => {
   const { messages } = await request.json();
 
-<<<<<<< HEAD
-  const result = await streamText({
-//    model: groq('one.rivet-project'), // Use the appropriate Groq model
-    model: groq('llama3-8b-8192'), // Use the appropriate Groq model
-    messages
-  });
-
-  return result.toAIStreamResponse();
-=======
 	const result = await streamText({
-		model: rivet('example.rivet-project'),
+		model: groq('llama-3.1-70b-versatile'),
 		messages
 	});
 
 	return result.toAIStreamResponse();
->>>>>>> openai
 }) as RequestHandler;
