@@ -3,6 +3,9 @@
 	import { afterUpdate } from 'svelte';
 
 	const { input, handleSubmit, messages } = useChat();
+	/**
+     * @type {HTMLDivElement}
+     */
 	let messageContainer;
 
 	afterUpdate(() => {

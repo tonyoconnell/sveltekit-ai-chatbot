@@ -4,18 +4,15 @@ import type { RequestHandler } from './$types';
 
 import { env } from '$env/dynamic/private';
 
-const rivet = createOpenAI({
-  baseURL: 'http://localhost:3100',
-//  baseURL: 'https://api.groq.com/openai/v1',
-  apiKey: env.GROQ_API_KEY ?? ''
+const openai = createOpenAI({
+	apiKey: env.OPENAI_API_KEY ?? ''
 });
-
 
 export const POST = (async ({ request }) => {
 	const { messages } = await request.json();
 
 	const result = await streamText({
-		model: rivet('example.rivet-project'),
+		model: openai('gpt-4o'),
 		messages
 	});
 
